@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Password Checker</title>
+</head>
+<body>
+
+<div class ="login">
+    <h1>Password Checker</h1>
+    <form method="post" action="/">
+
+        <input id="password" type="password" name="pwd" placeholder="Password" required="required" />
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me check</button>
+        {% if count %}
+        <p style="color:red;"><i class="fa fa-unlock" style="font-size:36px;color:red;padding:8px"></i>{{results}}</p>
+        {% elif  results %}
+        <p style="color:green;"><i class="fa fa-lock" style="font-size:36px;color:green;;padding:8px"></i>{{results}}</p>
+        {% endif%}
+    </form>
+
+</div>
+
+</body>
+</html>
