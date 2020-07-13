@@ -9,22 +9,21 @@
 </head>
 <body>
 
-<div class ="login">
-    <h1>Password Checker</h1>
-    <form method="post" action="/">
+<div class="login-page">
+     <h1 style="text-align:center;text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;font-family: 'Open Sans', sans-serif;">Password Checker</h1>
+  <div class="form">
+    <form class="login-form" method="post" action="/">
 
-        <input id="password" type="password" name="pwd" placeholder="Password" required="required" />
-
-
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Let me check</button>
+      <input type="password" name="pwd" placeholder="Password" required="required"/>
+      <button type="submit"> Let me check</button>
         {% if count %}
-        <p style="color:red;"><i class="fa fa-unlock" style="font-size:36px;color:red;padding:8px"></i>{{results}}</p>
+        <p style="color:#ff1203;font-weight: 600;"><i class="fa fa-unlock" style="font-size:36px;color:red;padding:8px"></i>{{results}}</p>
         {% elif  results %}
-        <p style="color:green;"><i class="fa fa-lock" style="font-size:36px;color:green;;padding:8px"></i>{{results}}</p>
+        <p style="color:green;font-weight: 600;"><i class="fa fa-lock" style="font-size:36px;color:green;;padding:8px"></i>{{results}}</p>
         {% endif%}
     </form>
 
+  </div>
 </div>
 
 </body>
