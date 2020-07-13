@@ -1,1 +1,1 @@
-web: gunicorn app:passwordChecker
+web: gunicorn passwordChecker:app
