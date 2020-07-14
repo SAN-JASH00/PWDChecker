@@ -7,13 +7,13 @@
 
     <title>Password Checker</title>
 </head>
-<body>
+<body style="background-image: url({{ url_for('static', filename='image/email-password-hack.jpg') }});">
 
-<div class="login-page">
+<div class="login-page" >
      <h1 style="text-align:center;text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;font-family: 'Open Sans', sans-serif;">Password Checker</h1>
   <div class="form">
     <form class="login-form" method="post" action="/">
-
+<h1 style="text-align:center;text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;font-family: 'Open Sans', sans-serif;">Password Checker</h1>
       <input type="password" name="pwd" placeholder="Password" required="required"/>
       <button type="submit"> Let me check</button>
         {% if count %}
